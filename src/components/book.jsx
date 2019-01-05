@@ -23,7 +23,7 @@ class Book extends Component {
 
     const data = await googleApiCall.json();
     console.log("data", data);
-    const dataItems = data.items;
+    
 
    
   };
@@ -37,13 +37,6 @@ class Book extends Component {
           by {this.state.books.author} | {this.state.books.publisher}
         </p>
         <p className="book-description">{this.state.books.description}</p>
-        {/* IMAGE:{" "}
-        <img
-          src="http://books.google.com/books/content?id=bPJUDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          alt="google-book"
-        /> */}
-        {/* BOOK COVER:
-        <img src={this.findBookCover()} alt="please-render" /> */}
       </li>
     );
   }
