@@ -8,7 +8,6 @@ const BookList = props => {
         {props.books.map((book, index) => (
           <div key={index}>
             <Book
-              // key={index}
               isbn={book.isbns[0].isbn10}
               author={book.book_details[0].author}
               bookTitle={book.book_details[0].title}

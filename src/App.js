@@ -8,17 +8,17 @@ import BookList from "./components/bookList";
 class App extends Component {
   state = {
     books: [],
-    format: "" // book format i.e. hardcover-fiction
+    format: "" 
   };
 
-  // NYT API call for best sellers list
+  
   getBooks = async e => {
-    // from form component
+    
     let formSearch = e.target.elements.formSearch.value;
     e.preventDefault();
     e.target.reset();
 
-    // clear state for next search
+    
     this.setState({ books: [] });
 
     // make API request
@@ -29,10 +29,10 @@ class App extends Component {
 
     const data = await nytApiCall.json();
 
-    // setState with data
+    
     this.setState({ books: data.results });
 
-    // to clean up form search, should use regex
+    
     if (formSearch === "hardcover-fiction") {
       formSearch = "Hardcover Fiction";
     }
